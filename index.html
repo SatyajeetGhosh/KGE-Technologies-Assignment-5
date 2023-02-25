@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="Images/C2C Logo.png" alt="company logo"></a>
+        </div>
+    </nav>
+    <main>
+        <section class="progress">
+            <div class="container">
+                <div class="steps">
+                    <div class="number">
+                        <span class="circle one active">1</span>
+                        <p>Vendor Details</p>
+                    </div>
+                    <div class="number">
+                        <span class="circle two">2</span>
+                        <p>Personal Details</p>
+                    </div>
+                    <div class="number">
+                        <span class="circle three">3</span>
+                        <p>Terms & Conditions</p>
+                    </div>
+                    <div class="number">
+                        <span class="circle four">4</span>
+                        <p>Payment Details</p>
+                    </div>
+                    <div class="progress-bar">
+                        <span class="indicator"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="forms-section">
+            <div class="form_1" id="form-1">
+                <h3>Vendor Details</h3>
+                <p>Kindly Verify Vendor Details Below making payment</p>
+                <div class="form-fields onee">
+                    <label for="vendorName">Vendor Name</label>
+                    <input type="text" value="C2C Venture Pvt Ltd">
+                </div>
+                <div class="form-fields">
+                    <label for="state">State</label>
+                    <input type="text" value="Tamil Nadu">
+                </div> 
+                <div class="buttons">
+                    <div class="buttons-container">
+                        <!-- <button class="nav-buttons" id="prev" disabled>Prev</button>
+                        <button class="nav-buttons" id="next">Next</button> -->
+                        <button class="nxt-btn" onclick="nextForm();topFunction();">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_2" id="form-2">
+                <h3>Personal Details</h3>
+                <p>Below details will be shared with the Vendor</p>
+                <!-- <div> -->
+                    <div class="form-fields one">
+                        <label for="fname">Name</label>
+                        <input type="text" placeholder="Your Name">
+                    </div>
+                    <div class="form-fields">
+                        <label for="phone">Phone</label>
+                        <input type="number" placeholder="Your Phone">
+                    </div> 
+                    <div class="form-fields">
+                        <label for="email">Email</label>
+                        <input type="text" placeholder="Your Email">
+                    </div> 
+                    <div class="form-fields">
+                        <label for="address">Address</label>
+                        <input type="text" placeholder="Your Address">
+                    </div> 
+                    <div class="form-fields">
+                        <label for="lname">Note to Vendor</label>
+                        <input type="text" placeholder="Your Message">
+                    </div> 
+                <!-- </div> -->
+                <div class="buttons">
+                    <div class="buttons-container">
+                        <!-- <button class="nav-buttons" id="prev" disabled>Prev</button>
+                        <button class="nav-buttons" id="next">Next</button> -->
+                        <button class="prev-btn" onclick="prevForm();topFunction();">Prev</button>
+                        <button class="next-btn" onclick="nextForm();topFunction();">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_3" id="form-3">
+                <h3>Terms & Conditions</h3>
+                <p>Confirm Paysecurely Terms & Conditions to Pay</p>
+                <button id="modal-btn">View Terms & Conditions</button>
+                <div class="form-fields">
+                    <label for="amount">Amount</label>
+                    <input type="number" placeholder="">
+                </div> 
+                <div class="terms">
+                    <input type="checkbox">
+                    <span>I have carefully read the said terms and conditions, understood and hereby agree & accept the same. I also confirm the details of payment requested by the Vendor and agree to pay for the said purchases.</span>
+                </div>
+                <div id="modal-popup"> 
+                    <div class="modal-container">
+                        <div class="modalContent">
+                            <div class="modal-text">
+                                <span id="close"><i class="fa-solid fa-xmark"></i></span>
+                                <p>While availing payment options provided herein, the merchant will neither be responsible nor assume any liability, whatsoever in respect of any loss or damage arising directly or indirectly to You due to:</p>
+                                <ol>
+                                    <li>Lack of authorization for any transaction/s, or</li>
+                                    <li>Exceeding the preset limit mutually agreed by You and the "Bank/s", or</li>
+                                    <li>Any payment issues arising out of the transaction, or</li>
+                                    <li>Decline of transaction for any other reason/s</li>
+                                </ol>
+                                <p>All payments made against the purchases/services on Website/store by you shall be mandatorily in Indian Rupees and within the territory of India. The payment link will not facilitate transaction in any other form of currency with respect to the purchases made on Website/Store.</p>
+                                <p>Before shipping / delivering your order to you, Seller may request you to provide supporting documents (including but not limited to Govt. issued ID and address proof) to establish the ownership of the payment instrument used by you for your purchase. This is done in the interest of providing a safe online shopping environment to users.</p>
+                                <p>Furthur:</p>
+                                <ol>
+                                    <li>Transactions, Transaction Price and all commercial terms such as Delivery, Dispatch of products and/or services are on a principal-to- principal bipartite contractual basis between the buyer and seller and the payment facility is merely used by the Buyer and Seller to facilitate completion of the Transaction.</li>
+                                    <li>You understand, accept and agree that the payment facility provided by seller is neither a banking nor financial service but is merely a facilitator providing automated online electronic payment.</li>
+                                    <h4 style="margin-top: 10px;">Payment Facility for Buyers:</h4>
+                                    <ul>
+                                        <li>You, as a Buyer, understand that upon initiating a Transaction You are entering into a legally binding and enforceable contract with the Seller to purchase the products and /or services from the Seller using the Payment Facility, and You shall pay the Transaction Price through your Issuing Bank to the Seller using the Payment Facility.</li>
+                                        <li>You, as a Buyer, may agree with the Seller through personal/ telephonic/electronic communication and electronic records and using the automated features as may be provided by Payment Facility on any extension / increase in the Dispatch and/or Delivery time and the Transaction shall stand amended to such extent. Any such extension / increase of Dispatch / Delivery time or subsequent novation / variation of the Transaction should be in compliance with Payment Facility Rules and Policies.</li>
+                                        <li>You, as a Buyer, shall notify the seller immediately upon non delivery within the time period as provided in Policies. Non notification by you of non-delivery within the time period specified in the Policies shall be construed as a deemed Delivery in respect of that Transaction.</li>
+                                        <li>You, as a Buyer, shall be entitled to claim a refund of the Transaction Price (as Your sole and exclusive remedy) in case You do not receive the Delivery within the time period agreed in the Transaction or within the time period as provided in the Policies, whichever is earlier. In case you do not raise a refund claim with the seller within the stipulated time then this would make you ineligible for a refund.</li>
+                                        <li>Refund, if any, shall be made at the same Issuing Bank from where Transaction Price was received. – This is correct.</li>
+                                        <li>Refund shall be made in Indian Rupees only and shall be equivalent to the Transaction Price received in Indian Rupees.</li>
+                                        <li>Refund shall be as per the sale conditions and shall be subject to Buyer complying with Policies.</li>
+                                    </ul>
+                                    <li>Seller reserves the right to impose limits on the number of Transactions or Transaction Price which seller may receive from an individual Valid Credit/Debit/ Cash Card / Valid Bank Account/ and such other infrastructure or any other financial instrument directly or indirectly through payment aggregator or through any such facility authorized by Reserve Bank of India to provide enabling support facility for collection and remittance of payment or by an individual Buyer during any time period, and reserves the right to refuse to process Transactions exceeding such limit.</li>
+                                    <li>Seller reserves the right to refuse to process Transactions by Buyers with a prior history of questionable charges including without limitation breach of any agreements by Buyer with seller or breach/violation of any law or any charges imposed by Issuing Bank or breach of any policy.</li>
+                                    <li>The seller shall be entitled to withhold the transaction price and to intimate law enforcement officials if the seller has reason to suspect that the buyer is engaged in any form of illegal activity.</li>
+                                    <li>The buyer acknowledges that the seller will not be liable for any damages, interests or claims etc. resulting from not processing a transaction/transaction price or any delay in processing a transaction/transaction price which is beyond the control of the buyer.</li>
+                                </ol>
+                                <h4>Insurance</h4>
+                                <ol>
+                                    <li>I understand that the insurance plan opted by me is on a voluntary basis.</li>
+                                    <li>I am aware that there are similar insurance plans available in the market.</li>
+                                    <li>I have understood the features and agree to proceed with my application.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                <div class="buttons">
+                    <div class="buttons-container">
+                        <!-- <button class="nav-buttons" id="prev" disabled>Prev</button>
+                        <button class="nav-buttons" id="next">Next</button> -->
+                        <button class="prev-btn" onclick="prevForm();topFunction();">Prev</button>
+                        <button class="next-btn" onclick="nextForm();topFunction();">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_4"  id="form-4">
+                <h3>Payment Details</h3>
+                <p>Please enter the details correctly</p>
+                <div class="card">
+                    <div class="form-fields">
+                        <label for="">Card Number</label>
+                        <input type="tel" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" maxlength="16" placeholder="XXXX-XXXX-XXXX-XXXX">
+                    </div>
+
+                    <div class="form-fields">
+                        <label for="">Expiry</label>
+                        <div class="month-year">
+                            <select name="" id="">
+                                <option value="MM" selected disabled>MM</option>
+                                <option value="01">Jan</option>
+                                <option value="02">Feb</option>
+                                <option value="03">Mar</option>
+                                <option value="04">Apr</option>
+                                <option value="05">May</option>
+                                <option value="06">Jun</option>
+                                <option value="07">Jul</option>
+                                <option value="08">Aug</option>
+                                <option value="09">Sep</option>
+                                <option value="10">Oct</option>
+                                <option value="11">Nov</option>
+                                <option value="12">Dec</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="YYYY" selected disabled>YYYY</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                        </div>                        
+                    </div>
+
+                    <div class="form-fields">
+                        <label for="">CVV</label>
+                        <input type="number" maxlength="3">
+                    </div>
+
+                    <div class="form-fields">
+                        <label for="">Cardholder Name</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="buttons-container">
+                        <!-- <button class="nav-buttons" id="prev" disabled>Prev</button>
+                        <button class="nav-buttons" id="next">Next</button> -->
+                        <button class="prev-btn" onclick="prevForm();topFunction();">Prev</button>
+                        <button class="next-btn" onclick="nextForm();topFunction();">Pay</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="copyright">
+            2021© <a href="#">C2C Venture Private Limited</a>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

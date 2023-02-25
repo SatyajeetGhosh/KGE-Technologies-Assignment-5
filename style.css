@@ -1,0 +1,374 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
+nav{
+    background-color: #3699FF;
+    padding: 0.8em;
+    margin-bottom: 2em;
+}
+
+nav .logo a{
+    text-decoration: none;
+}
+
+nav .logo a img{
+    width: 70px;
+    height: 40px;
+    margin-left: 2em;
+}
+
+.progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress .container {
+    padding: 1em 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.progress .container .steps{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    column-gap: 2em;
+}
+
+.progress .container .steps .number{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.progress .container .steps .number .circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    color: #999;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 50%;
+    background: #fff;
+    border: 4px solid #e0e0e0;
+    transition: all 200ms ease;
+}
+
+.progress .container .steps .circle.active{
+    border-color: #3699FF;
+    color: #3699FF;
+}
+
+.forms-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.forms-section .form_1, .forms-section .form_2, .forms-section .form_3, .forms-section .form_4{
+    padding: 2em;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.forms-section .form_2, .forms-section .form_3, .forms-section .form_4{
+    display: none;
+}
+
+.forms-section .form_1 h3, .forms-section .form_2 h3, .forms-section .form_3 h3, .forms-section .form_4 h3{
+    color: #3699FF;
+}
+
+.forms-section .form_1 p, .forms-section .form_2 p, .forms-section .form_3 p, .forms-section .form_4 p{
+    font-weight: 600;
+    color: #c9c8c8;
+    margin-bottom: 10px;
+}
+
+.forms-section .form_1 .form-fields, .forms-section .form_2 .form-fields, .forms-section .form_3 .form-fields, .forms-section .form_4 .card .form-fields{
+    display: flex;
+    flex-direction: column;
+}
+
+.forms-section .form_1 .onee{
+    margin-bottom: 1em;
+}
+
+.forms-section .form_1 .form-fields label, .forms-section .form_2 .form-fields label, .forms-section .form_3 .form-fields label, .forms-section .form_4 .card .form-fields label{
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+.forms-section .form_1 .form-fields input, .forms-section .form_2 .form-fields input, .forms-section .form_3 .form-fields input, .forms-section .form_4 .card .form-fields input{
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: 0.8em 1.2em;
+    border-radius: 2em;
+    color: #3699FF;
+    background-color: #E3F6FF;
+}
+
+.forms-section .form_3 button{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    background-color: #3699FF;
+    padding: 0.8em 1.2em;
+    border-radius: 2em;
+    color: white;
+    margin-bottom: 1em;
+    transition: all 0.2s ease;
+}
+
+.forms-section .form_3 button:hover{
+    background-color: #0080ff;
+}
+
+.forms-section .form_2 .form-fields input, .forms-section .form_3 .form-fields input, .forms-section .form_4 .card .form-fields input{
+    margin-bottom: 1em;
+}
+
+.form_3 #modal-popup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000b3;
+    z-index: 1;
+    overflow: auto;
+    display: none;
+}
+
+.form_3 #modal-popup .modal-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form_3 #modal-popup .modal-container .modalContent{
+    max-width: 650px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;   
+    overflow-y: scroll;
+}
+
+.form_3 #modal-popup .modal-container .modalContent .modal-text{
+    padding: 2em;
+    text-align: justify;
+    background-color: white;
+}
+
+.form_3 #modal-popup .modal-container .modalContent .modal-text p{
+    color: black;
+    margin-bottom: 1em;
+}
+
+.form_3 #modal-popup .modal-container .modalContent .modal-text ol{
+    margin-bottom: 1em;
+}
+
+.form_3 #modal-popup .modal-container .modalContent .modal-text h4{
+    margin-bottom: 10px;
+}
+
+.form_3 #modal-popup .modal-container .modalContent .modal-text ul{
+    list-style-type: disc;
+}
+
+#close{
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.forms-section .form_4 .card  .card-option i{
+    font-size: 20px;
+}
+
+.forms-section .form_4 .card  .card-option label{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.forms-section .form_4 .card .form-fields{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.forms-section .form_4 .card .form-fields .month-year{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1em;
+}
+
+.forms-section .form_4 .card .form-fields .month-year select{
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: 0.8em 1.2em;
+    border-radius: 2em;
+    color: #3699FF;
+    background-color: #E3F6FF;
+}
+
+.buttons {
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons .buttons-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px;
+    width: 100%;
+}
+
+.buttons .buttons-container button{
+    padding: 8px 25px;
+    background: #3699FF;
+    border: none;
+    border-radius: 2em;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: all 200ms linear;
+}
+
+.buttons .buttons-container button:hover{
+    background-color: #0080ff;
+}
+
+.buttons .buttons-container button:active{
+    transform: scale(0.97);
+}
+
+.buttons .buttons-container button:disabled{
+    background: #c9c8c8;
+    cursor: not-allowed;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 4em;
+    margin-top: 2em;
+}
+
+footer .copyright{
+    font-size: 0.8rem;
+}
+
+footer .copyright a{
+    text-decoration: none;
+    color: black;
+}
+
+footer .footer-links ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+footer .footer-links ul li{
+    margin-left: 1em;
+}
+
+footer .footer-links ul li a{
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: black;
+}
+
+footer .copyright a:hover, footer .footer-links ul li a:hover{
+    color: #3699FF;
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+    .progress .container {
+        padding: 1em;
+        width: 90%;
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .progress .container {
+        padding: 0.5;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .progress .container .steps{
+        column-gap: 0.5em;
+    }
+
+    .forms-section{
+        margin-top: 0;
+    }
+
+    .forms-section .form_1, .forms-section .form_2, .forms-section .form_3, .forms-section .form_4{
+        box-shadow: none;
+    }
+
+    footer .footer-links ul{
+        flex-direction: column;
+        text-align: center;
+    }
+}
