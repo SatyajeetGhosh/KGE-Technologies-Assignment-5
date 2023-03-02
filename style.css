@@ -43,7 +43,7 @@ nav .logo a img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 800px;
+    max-width: 820px;
     width: 100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -113,7 +113,7 @@ nav .logo a img{
     margin-bottom: 10px;
 }
 
-.forms-section .form_1 .form-fields, .forms-section .form_2 .form-fields, .forms-section .form_3 .form-fields, .forms-section .form_4 .card .form-fields{
+.forms-section .form_1 .form-fields, .forms-section .form_2 .form-fields, .forms-section .form_3 .form-fields{
     display: flex;
     flex-direction: column;
 }
@@ -221,37 +221,128 @@ nav .logo a img{
     cursor: pointer;
 }
 
-.forms-section .form_4 .card  .card-option i{
-    font-size: 20px;
+details{
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #E3F6FF;
+    color: #0080ff;
+    user-select: none;
 }
 
-.forms-section .form_4 .card  .card-option label{
-    font-size: 17px;
-    font-weight: 500;
+details[open]{
+    border: 1.8px solid #0080ff;
 }
 
-.forms-section .form_4 .card .form-fields{
+details summary{
+    outline: none;
+    cursor: pointer;
+    list-style: none;
+}
+
+details[open] summary{
+    padding-bottom: 1em;
+}
+
+details div label, span{
+    color: black;
+}
+
+details .address-container .address{
     display: flex;
-    flex-direction: column;
-
-}
-
-.forms-section .form_4 .card .form-fields .month-year{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 10px;
+    column-gap: 1em;
+    align-items: first baseline;
     margin-bottom: 1em;
 }
 
-.forms-section .form_4 .card .form-fields .month-year select{
+details .payment-container .payment{
+    display: flex;
+    align-items: first baseline;
+    column-gap: 1em;
+}
+
+details .payment-container .payment .card label{
+    margin-bottom: 1em;
+}
+
+details .payment-container .payment .card .card-images img{
+    height: 25px;
+    width: 30px;
+}
+
+details .net-banking-container, details .upi-container, details .emi, details .cod{
+    display: flex;
+    column-gap: 1em;
+    align-items: first baseline;
+    margin-bottom: 1em;
+}
+
+details .net-banking-container .net-banking{
+    display: flex;
+    flex-direction: column;
+}
+
+details .net-banking-container .net-banking label{
+    margin-bottom: 1em;
+}
+
+details .net-banking-container .net-banking select{
     outline: none;
     border: none;
     font-size: 1rem;
-    padding: 0.8em 1.2em;
+    padding: 0.4em 0.8em;
+    border: 1.5px solid #3699FF;
     border-radius: 2em;
     color: #3699FF;
     background-color: #E3F6FF;
+    appearance: none;
+    width: 75%;
+}
+
+details .upi-container .upi .verify{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+details .upi-container .upi .verify input{
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: 0.4em 0.8em;
+    border: 1.5px solid #3699FF;
+    border-radius: 10px;
+    color: #3699FF;
+    background-color: #E3F6FF;
+    margin-right: 10px;
+}
+
+details .upi-container .upi .verify input::placeholder{
+    color: #3699FF;
+}
+
+details .upi-container .upi .verify button{
+    padding: 0.4em 0.8em;
+    background: #3699FF;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: all 200ms linear;
+}
+
+details .upi-container .upi .verify button:hover{
+    background-color: #0080ff;
+}
+
+details .summary-container .summary-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .buttons {
@@ -345,6 +436,17 @@ footer .copyright a:hover, footer .footer-links ul li a:hover{
         flex-direction: column;
         justify-content: center;
         text-align: center;
+    }
+}
+
+@media (max-width: 426px){
+    .progress .container .steps .number{
+        font-size: 14px;
+    }
+
+    details .upi-container .upi .verify input{
+        width: 81%;
+        margin-bottom: 10px;
     }
 }
 
