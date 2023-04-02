@@ -1,6 +1,8 @@
 <h1>KGE Technologies Task-5</h1>
 <p>My 5th assignment was to build the frontend of a payment gateway page for one of company's clients.<p/>
 
+<p>The payment gateway page was a multistep form with different fields for each form in each step. There are are two buttons(prev & next) to move from one form to another.<p/>
+
 <p><a href="https://satyajeetghosh.github.io/KGE-Technologies-Assignment-5/" target="_blank">Click here</a> for a preview or go to https://satyajeetghosh.github.io/KGE-Technologies-Assignment-5/</p>
 
 <p>Tech stack Used: HTML, CSS, Javascript</p>
